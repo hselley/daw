@@ -25,7 +25,7 @@
   <!-- Aqui va la cabecera -->
   <div class="container-fluid cabecera" style="height:200px;">
     <div class="container">
-      <h1 class="titulo-principal">Programación para Internet</h1>
+      <h1 class="titulo-principal">Desarrollo de Aplicaciones Web</h1>
       <p>Sitio de Apoyo y Complemento</p>
     </div>
   </div>
