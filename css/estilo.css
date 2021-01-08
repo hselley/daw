@@ -1,0 +1,143 @@
+/* Body */
+/* Se define la fuente personalizada: cuerpo de la página */
+@font-face {
+  font-family: miFuente;
+  /* La fuente es Ubuntu Regular, que se guarda dentro del sitio para mayor rápidez de carga */
+  src: url(../../css/ubuntu-font-family/Ubuntu-R.ttf);
+}
+
+/* Se define la fuente personalizada: código */
+@font-face {
+  font-family: miFuenteCodigo;
+  /* La fuente es Ubuntu Mono, que se guarda dentro del sitio para mayor rápidez de carga */
+  src: url(../../css/ubuntu-font-family/UbuntuMono-R.ttf);
+}
+
+body {
+    font-family: "miFuente";
+}
+
+/* Header */
+.cabecera {
+  background: #1f7a7a;
+  color: white;
+  padding: 20px 0;
+}
+
+.cabecera .titulo-principal {
+  font-size: 50px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .main.container {
+    padding-top: 50px;
+}
+
+/* Post */
+.main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tema {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #999;
+}
+
+.tema .titulo-tema a {
+  color: #333;
+}
+
+.tema .thumb {
+  margin-right: 10px;
+  width: 25%;
+}
+
+.tema .thumb img {
+  width: 100%;
+}
+
+img.imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border:none;
+}
+
+.tema .contenedor-botones {
+  width: 100%;
+}
+
+article {
+  font-size: 1.3em;
+}
+
+.textoTabla {
+  text-align: center;
+}
+
+.social {
+/*	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+/*	left: 0; /* Establecemos la barra en la izquierda */
+/*	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.social ul {
+	list-style: none;
+}
+
+.social ul li a {
+	display: inline-block;
+	color:#fff;
+	background: #000;
+	padding: 10px;
+	text-decoration: none;
+	-webkit-transition:all 500ms ease;
+  -moz-transition: all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li .icon-facebook2 {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-twitter2 {background: #00abf0;}
+.social ul li .icon-google-plus2 {background: #d95232;}
+.social ul li .icon-youtube3 {background: #ae181f;}
+.social ul li .icon-mail {background: #666666;}
+
+.social ul li a:hover {
+	background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+	/*padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
+
+/* -- Media Querie -- */
+@media screen and (max-width: 768px) {
+  .post .thumb {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+}
+
+/* Estilo para el código */
+pre {
+  font-family: "miFuenteCodigo";
+  font-size: 0.875em;
+}
+
+/* Estilo para ejemplos en parrafos */
+/*p.ejemplo {
+    color: blue;
+    background-color: #E6E6E6;
+    border-radius: 5px;
+    text-align: center;
+}*/
