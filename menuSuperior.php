@@ -11,7 +11,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-       <a href="index.php" class="navbar-brand">PPI</a>
+       <a href="index.php" class="navbar-brand">DAW</a>
      </div>
      <!-- Inicia Menú-->
      <div class="collapse navbar-collapse" id="navegacion-fm">
@@ -23,7 +23,6 @@
            </a>
            <ul class="dropdown-menu" role="menu">
              <li><a href="usabilidad.php">Usabilidad</a></li>
-             <li><a href="arquitecturaInformacion.php">Arquitectura de la Información</a></li>
              <li><a href="html.php">HTML</a></li>
              <li><a href="css.php">CSS</a></li>
              <li><a href="js.php">JavaScript</a></li>
@@ -33,7 +32,6 @@
              <li><a href="bootstrap.php">BootStrap</a></li>
              <li><a href="angularjs.php">Angular JS</a></li>
              <li><a href="git.php">Git</a></li>
-             <li><a href="ajax.php">AJAX</a></li>
              <li><a href="json.php">jSON</a></li>
            </ul>
          </li>

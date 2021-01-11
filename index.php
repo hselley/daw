@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Programación para Internet</title>
+  <title>Desarrollo de Aplicaciones Web</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="stylesheet" href="../css/iconos.css">
@@ -40,7 +40,7 @@
         <!-- Tema 1 -->
         <article class="tema clearfix">
           <a href="usabilidad.php" class="thumb pull-left">
-            <img class="img-thumbnail" src="img/usabilidad.jpg" alt="Usabilidad" >
+            <img class="img-thumbnail" src="img/usabilidad.png" alt="Usabilidad" >
           </a>
           <h2 class="titulo-tema">
             <a href="usabilidad.php">
@@ -56,24 +56,6 @@
         </article>
 
         <!-- Tema 2 -->
-        <article class="tema clearfix">
-          <a href="arquitecturaInformacion.php" class="thumb pull-left">
-            <img class="img-thumbnail" src="img/arquitecturaInformacion.png" alt="">
-          </a>
-          <h2 class="titulo-tema">
-            <a href="arquitecturaInformacion.php">
-              Arquitectura de la Información
-            </a>
-          </h2>
-          <p class="post-contenido text-justify">
-            En esta sección se describen los conceptos básicos sobre la arquitectura de la información así como las actividades que debe realizar un arquitecto de la información.
-          </p>
-          <div class="contenedor-botones text-right">
-            <a href="arquitecturaInformacion.php" class="btn btn-primary">Leer más</a>
-          </div>
-        </article>
-
-        <!-- Tema 3 -->
         <article class="tema clearfix">
           <a href="html.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/html5.jpg" alt="HTML">
@@ -92,10 +74,10 @@
           </div>
         </article>
 
-        <!-- Tema 4 -->
+        <!-- Tema 3 -->
         <article class="tema clearfix">
           <a href="css.php" class="thumb pull-left">
-            <img class="img-thumbnail" src="img/css3.png" alt="">
+            <img class="img-thumbnail" src="img/css3.jpg" alt="">
           </a>
           <h2 class="titulo-tema">
             <a href="css.php">
@@ -185,6 +167,25 @@
 
         <!-- Tema 9 -->
         <article class="tema clearfix">
+          <a href="ruby.php" class="thumb pull-left">
+            <img class="img-thumbnail" src="img/ruby.png" alt="">
+          </a>
+          <h2 class="titulo-tema">
+            <a href="ruby.php">
+              Ruby
+            </a>
+          </h2>
+          <p class="post-contenido text-justify">
+            Ruby Un lenguaje de programación dinámico y de código abierto enfocado en la simplicidad y productividad. Su elegante sintaxis se
+            siente natural al leerla y fácil al escribirla.
+          </p>
+          <div class="contenedor-botones text-right">
+            <a href="ruby.php" class="btn btn-primary">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Tema 10 -->
+        <article class="tema clearfix">
           <a href="bootstrap.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/bootstrap.png" alt="">
           </a>
@@ -201,7 +202,7 @@
           </div>
         </article>
 
-        <!-- Tema 10 -->
+        <!-- Tema 11 -->
         <article class="tema clearfix">
           <a href="angularjs.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/angular.png" alt="">
@@ -219,7 +220,7 @@
           </div>
         </article>
 
-        <!-- Tema 11 -->
+        <!-- Tema 12 -->
         <article class="tema clearfix">
           <a href="git.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/git.png" alt="">
@@ -257,7 +258,7 @@
         </article> -->
 
         <!-- Tema 13 -->
-        <!-- <article class="tema clearfix">
+        <article class="tema clearfix">
           <a href="json.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/json.png" alt="jSON">
           </a>
@@ -272,7 +273,7 @@
           <div class="contenedor-botones text-right">
             <a href="json.php" class="btn btn-primary">Leer más</a>
           </div>
-        </article> -->
+        </article>
   </section>
 
   <!-- Aca va el pie de página -->

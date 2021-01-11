@@ -13,7 +13,7 @@
   <!-- Aqui va la cabecera -->
     <div class="container-fluid cabecera" style="height:200px;">
       <div class="container">
-        <h1 class="titulo-principal">Titulo</h1>
+        <h1 class="titulo-principal">Ruby</h1>
         <p></p>
       </div>
     </div>
@@ -24,12 +24,19 @@
   <section class="main container">
 
     <article class="tema">
-      <h2>Titulo</h2>
+      <h2>¿Qué es Ruby?</h2>
       <p class="text-justify">
-        contenido
+        Ruby es un lenguaje con un balance cuidado. Su creador, Yukihiro “Matz” Matsumoto, mezcló partes de sus lenguajes favoritos
+        (Perl, Smalltalk, Eiffel, Ada y Lisp) para formar un nuevo lenguaje que incorporara tanto la programación funcional como la
+        imperativa.
       </p>
+        A menudo ha manifestado que está “tratando de hacer que Ruby sea natural, no simple”, de una forma que se asemeje a la vida real.
       <p class="text-justify">
+        Continuando sobre esto, agrega:
       </p>
+      <blockquote cite="https://www.ruby-lang.org/es/about/#fn1">
+        Ruby es simple en apariencia, pero complejo por dentro, como el cuerpo humano.
+      </blockquote>
       <p class="text-justify">
       </p>
       <p class="text-justify"></p>

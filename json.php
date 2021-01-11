@@ -13,7 +13,7 @@
   <!-- Aqui va la cabecera -->
     <div class="container-fluid cabecera" style="height:200px;">
       <div class="container">
-        <h1 class="titulo-principal">Titulo</h1>
+        <h1 class="titulo-principal">jSON</h1>
         <p></p>
       </div>
     </div>
@@ -24,7 +24,7 @@
   <section class="main container">
 
     <article class="tema">
-      <h2>Titulo</h2>
+      <h2>Introducción</h2>
       <p class="text-justify">
         contenido
       </p>
