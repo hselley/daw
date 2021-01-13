@@ -143,7 +143,7 @@
           <li><p class="text-justify">Lectura en línea de archivos PDF.</p></li>
           <li><p class="text-justify">No cambiar el color de links visitados.</p></li>
           <li><p class="text-justify">Demasiado Texto.</p></li>
-          <li><p class="text-justify">Texto no escalable.</p></li>
+          <li><p class="text-justify">Texto no escaneable.</p></li>
           <li><p class="text-justify">Título de página con poca visibilidad de búsqueda.</p></li>
           <li><p class="text-justify">Todo luce como un anuncio.</p></li>
           <li><p class="text-justify">Violación de los convenios del diseño.</p></li>
