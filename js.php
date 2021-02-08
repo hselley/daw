@@ -732,7 +732,99 @@
           }
         }
       </code></pre>
+      <p class="text-justify">
+        <b>Ejercicio 15. </b> Extracción de valores de input <code>radio</code> y <code>checkbox</code>.
+      </p>
+      <p class="text-justify">
+        HTML
+      </p>
+      <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="es"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;title&gt;Formulario&lt;/title&gt;
+      &lt;script type="text/javascript" src="extraer.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Formulario tipo Radio&lt;/h1&gt;
+      &lt;p&gt;Extracción de valor del imput tipo radio&lt;/p&gt;
+      &lt;h2&gt;Elija su genero:&lt;/h2&gt;
+      &lt;form action=""&gt;
+        &lt;label for="mas"&gt;Masculino:&lt;/label&gt;
+        &lt;input type="radio" name="genero" value="Masculino" id="mas"&gt; &lt;br&gt;
+        &lt;label for="fem"&gt;Femenino:&lt;/label&gt; 
+        &lt;input type="radio" name="genero" value="Femenino" id="fem"&gt; &lt;br&gt;
+        &lt;label for="lgbti"&gt;LGBTI:&lt;/label&gt;
+        &lt;input type="radio" name="genero" value="LGBTI" id="lgbti"&gt; &lt;br&gt;
+        &lt;label for="none"&gt;Ninguno:&lt;/label&gt;
+        &lt;input type="radio" name="genero" value="Ninguno" id="none"&gt; &lt;br&gt;
+        &lt;label for="otro"&gt;Otro: &lt;/label&gt;
+        &lt;input type="radio" name="genero" value="Otro" id="otro"&gt; &lt;br&gt;
+      &lt;/form&gt;
+      &lt;button onclick="extraccion()"&gt;Seleccionar&lt;/button&gt;
+      &lt;p id="resultado"&gt;&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+      </code></pre>
+      <p class="text-justify">
+        JS
+      </p>
+      <p class="text-justify">
+        La primer forma de extraer el valor del selector elegido.
+      </p>
+      <pre><code>
+    function extraccion() {
 
+    var g = document.getElementsByName("genero");
+    var y = document.getElementById("resultado");
+    var cad = "";
+    var genero;
+
+    // Primera forma de extracción  
+    for(i=0; i&lt;g.length; i++) {
+      if(g[i].checked) {
+        genero=g[i].value;
+        console.log(genero);
+        cad = "&lt;p&gt;Su genero es " + genero + "&lt;/p&gt;";
+      }
+    }
+        
+    y.innerHTML = cad;
+
+    if(genero!=null)
+        y.innerHTML = cad;
+    else
+        y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;"; 
+    }
+      </code></pre>
+      <p class="text-justify">
+        La segunda forma de extraer el valor del selector elegido.
+      </p>
+      <pre><code>
+    function extraccion() {
+
+    var g = document.getElementsByName("genero");
+    var y = document.getElementById("resultado");
+    var cad = "";
+    var genero;
+
+    // Segunda forma de extracción
+    x = document.querySelector('input[name=genero]:checked');
+    if(x != null) {
+        genero = x.value;
+        console.log(genero) 
+        cad = "&lt;p&gt;" + genero + "&lt;/p&gt;";
+    }
+        
+    y.innerHTML = cad;
+
+    if(genero!=null)
+        y.innerHTML = cad;
+    else
+        y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;"; 
+    }
+      </code></pre>
       <h2>Manejo de Errores: Throw - Try - Catch</h2>
       <p class="text-justify">
         Cuando se ejecuta código JavaScript pueden ocurrir diferentes tipos de errores:
@@ -776,7 +868,7 @@
       </code></pre>
 
       <p class="text-justify">
-        <b>Ejemplo 15</b>. Try - Catch
+        <b>Ejemplo 16</b>. Try - Catch
       </p>
       <p class="text-justify">
         HTML:
@@ -824,7 +916,7 @@
         La excepción puede ser una cadena, numero, booleano u objeto.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 16</b>. Verificar el valor ingresado por el usuario.
+        <b>Ejemplo 17</b>. Verificar el valor ingresado por el usuario.
       </p>
       <p class="text-justify">
         HTML:
@@ -885,7 +977,7 @@
         </li>
       </ul>
       <p class="text-justify">
-        <b>Ejemplo 17</b>. Validar campos de texto.
+        <b>Ejemplo 18</b>. Validar campos de texto.
       </p>
       <p class="text-justify">
         HTML:
@@ -923,7 +1015,7 @@
   }
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 18</b>. Validación de dirección de correo electrónico
+        <b>Ejemplo 19</b>. Validación de dirección de correo electrónico
       </p>
       <p class="text-justify">
         HTML:

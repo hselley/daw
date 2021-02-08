@@ -68,7 +68,7 @@
       <h2>Práctica 3: HTML 2</h2>
       <h3>Tablas con HTML y estilo básico con CSS.</h3>
       <p class="text-justify">
-        Elija alguna temática de su agrado y desarrollar las siguietnes tablas en HTML con las características indicadas:
+        Elija alguna temática de su agrado y desarrollar las siguientes tablas en HTML con las características indicadas:
       </p>
       <ol>
         <!-- <li>
