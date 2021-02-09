@@ -733,7 +733,7 @@
         }
       </code></pre>
       <p class="text-justify">
-        <b>Ejercicio 15. </b> Extracción de valores de input <code>radio</code> y <code>checkbox</code>.
+        <b>Ejercicio 15. </b> Extracción de valores de input <code>radio</code>.
       </p>
       <p class="text-justify">
         HTML
@@ -771,7 +771,8 @@
         JS
       </p>
       <p class="text-justify">
-        La primer forma de extraer el valor del selector elegido.
+        La primer forma de extraer el valor del selector elegido. 
+        El método clásico y manual de extracción.
       </p>
       <pre><code>
     function extraccion() {
@@ -781,17 +782,15 @@
     var cad = "";
     var genero;
 
-    // Primera forma de extracción  
+    // Primer método: clásico
     for(i=0; i&lt;g.length; i++) {
       if(g[i].checked) {
-        genero=g[i].value;
+        genero = g[i].value;
         console.log(genero);
         cad = "&lt;p&gt;Su genero es " + genero + "&lt;/p&gt;";
       }
     }
         
-    y.innerHTML = cad;
-
     if(genero!=null)
         y.innerHTML = cad;
     else
@@ -799,7 +798,8 @@
     }
       </code></pre>
       <p class="text-justify">
-        La segunda forma de extraer el valor del selector elegido.
+        La segunda forma de extraer el valor del selector elegido. Una
+        mejora al método clásico.
       </p>
       <pre><code>
     function extraccion() {
@@ -809,7 +809,7 @@
     var cad = "";
     var genero;
 
-    // Segunda forma de extracción
+    // Segundo método: mejora del clásico
     x = document.querySelector('input[name=genero]:checked');
     if(x != null) {
         genero = x.value;
@@ -817,14 +817,154 @@
         cad = "&lt;p&gt;" + genero + "&lt;/p&gt;";
     }
         
-    y.innerHTML = cad;
-
     if(genero!=null)
         y.innerHTML = cad;
     else
         y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;"; 
     }
       </code></pre>
+      <p class="text-justify">
+        La tercer forma de extraer el valor del selector elegido.
+        Una forma más práctica.
+      </p>
+      <pre><code>
+    function extraccion() {
+
+    var g = document.getElementsByName("genero");
+    var y = document.getElementById("resultado");
+    var cad = "";
+    var genero;
+
+    // Tercer método
+    z = document.querySelector('input[name=genero]:checked');
+    if(z!=null) {
+      genero = z.value;
+      console.log(genero);
+      cad = "&lt;p&gt;Su genero es " + genero + "&lt;/p&gt;";
+    }
+
+    if(genero!=null)
+        y.innerHTML = cad;
+    else
+        y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;"; 
+
+    }              
+      </code></pre>
+      <p class="text-juatify">
+        <b>Ejemplo 16.</b> Extracción de valores input <code>checkbox</code>.
+      </p>
+      <p class="text-juatify">HTML</p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Checkbox&lt;/title&gt;
+    &lt;script type="text/javascript" src="extraerCheckbox.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Medio transporte&lt;/h1&gt;
+    &lt;p&gt;Seleccione su medio de transporte predilecto.&lt;/p&gt;
+    &lt;form action=""&gt;
+      &lt;input type="checkbox" name="transporte" value="Automovil" id="auto"&gt;
+      &lt;label for="auto"&gt;Automóvil&lt;/label&gt; 
+      &lt;br&gt;
+      &lt;input type="checkbox" name="transporte" value="Motocicleta" id="moto"&gt;
+      &lt;label for="moto"&gt;Motocicleta&lt;/label&gt;
+      &lt;br&gt;
+      &lt;input type="checkbox" name="transporte" value="Bicicleta" id="bici"&gt;
+      &lt;label for="bici"&gt;Bicicleta&lt;/label&gt;
+      &lt;br&gt;
+      &lt;input type="checkbox" name="transporte" value="Transporte Público" id="trans"&gt;
+      &lt;label for="trans"&gt;Transporte Público&lt;/label&gt;
+      &lt;br&gt;
+      &lt;input type="checkbox" name="transporte" value="Otro" id="otro"&gt;
+      &lt;label for="otro"&gt;Otro&lt;/label&gt;
+    &lt;/form&gt;
+    &lt;button onclick="proceso()"&gt;Enviar&lt;/button&gt;
+    &lt;p id="resultado"&gt;&lt;/p&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;      
+      </code></pre>
+      <p class="text-justify">
+        La primer forma de extraer el valor del selector elegido. 
+        El método clásico y manual de extracción.
+      </p>
+      <pre><code>
+  function proceso() {
+    x = document.getElementsByName("transporte");
+    y = document.getElementById("resultado");
+    var cad = "";
+    var transporte;
+
+    // Primer método: clásico
+    for(i=0; i&lt;x.length; i++) {
+      if(x[i].checked) {
+        transporte = x[i].value;
+        console.log(transporte);
+        cad = cad + "&lt;p&gt;" + transporte + "&lt;/p&gt;";
+      }
+    }
+
+    if(transporte!=null)
+      y.innerHTML = cad;
+    else 
+      y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;";
+  }
+      </code></pre>
+      <p class="text-justify">
+        La segunda forma de extraer el valor del selector elegido. Una
+        mejora al método clásico.
+      </p>
+      <pre><code>
+  function proceso() {
+    x = document.getElementsByName("transporte");
+    y = document.getElementById("resultado");
+    var cad = "";
+    var transporte;
+
+    // Segundo método: mejora del clásico
+    for(i of x) {
+      if(i.checked) {
+        transporte = i.value;
+        console.log(transporte);
+        cad = cad + "&lt;p&gt;" + transporte + "&lt;/p&gt;";
+      }
+    }
+    
+    if(transporte!=null)
+      y.innerHTML = cad;
+    else 
+      y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;";
+  }        
+      </code></pre>
+      <p class="text-justify">
+        La tercer forma de extraer el valor del selector elegido.
+        Una forma más práctica.
+      </p>
+      <pre><code>
+  function proceso() {
+    x = document.getElementsByName("transporte");
+    y = document.getElementById("resultado");
+    var cad = "";
+    var transporte;
+
+    // Tercer método
+    z = document.querySelectorAll('input[name=transporte]:checked');
+    for(var v of z) {
+      transporte = v.value;
+      console.log(transporte);
+      cad = cad + "&lt;p&gt;" + transporte + "&lt;/p&gt;";
+    }
+    
+    if(transporte!=null)
+      y.innerHTML = cad;
+    else 
+      y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;";
+  }        
+      </code></pre>
+
       <h2>Manejo de Errores: Throw - Try - Catch</h2>
       <p class="text-justify">
         Cuando se ejecuta código JavaScript pueden ocurrir diferentes tipos de errores:
@@ -868,7 +1008,7 @@
       </code></pre>
 
       <p class="text-justify">
-        <b>Ejemplo 16</b>. Try - Catch
+        <b>Ejemplo 17</b>. Try - Catch
       </p>
       <p class="text-justify">
         HTML:
@@ -916,7 +1056,7 @@
         La excepción puede ser una cadena, numero, booleano u objeto.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 17</b>. Verificar el valor ingresado por el usuario.
+        <b>Ejemplo 18</b>. Verificar el valor ingresado por el usuario.
       </p>
       <p class="text-justify">
         HTML:
@@ -977,7 +1117,7 @@
         </li>
       </ul>
       <p class="text-justify">
-        <b>Ejemplo 18</b>. Validar campos de texto.
+        <b>Ejemplo 19</b>. Validar campos de texto.
       </p>
       <p class="text-justify">
         HTML:
@@ -1015,7 +1155,7 @@
   }
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 19</b>. Validación de dirección de correo electrónico
+        <b>Ejemplo 20</b>. Validación de dirección de correo electrónico
       </p>
       <p class="text-justify">
         HTML:
