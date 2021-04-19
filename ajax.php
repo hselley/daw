@@ -89,6 +89,11 @@
       <p class="text-justify">
         <b>Nota</b>: <b>XMLHttpRequest</b> es un nombre engañoso, no es necesario conocer XML para utilizar AJAX.
       </p>
+
+      <h2>El objeto XMLHttpRequest</h2>
+      <p>Esta es una pieza clave para. Todos los navegadores web modernos soportan nativamente este objeto.</p>
+      <p>Se puede utilizar para intercambiar datos con el servidor web en segundo plano, esto significa que una página
+      puede actualizar contenido de ella sin necesidad de recargar toda la página completa.</p>
     </article>
 
   </section>
