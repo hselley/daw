@@ -113,24 +113,6 @@
 
         <!-- Tema 6 -->
         <article class="tema clearfix">
-          <a href="jQuery.php" class="thumb pull-left">
-            <img class="img-thumbnail" src="img/jquery.png" alt="">
-          </a>
-          <h2 class="titulo-tema">
-            <a href="jQuery.php">
-              jQuery
-            </a>
-          </h2>
-          <p class="post-contenido text-justify">
-            jQuery es una biblioteca de scripts JS. El objetivo principal de jQuery es simplificar la programación de JavaScript. jQuery es sencillo de aprender.
-          </p>
-          <div class="contenedor-botones text-right">
-            <a href="jQuery.php" class="btn btn-primary">Leer más</a>
-          </div>
-        </article>
-
-        <!-- Tema 7 -->
-        <article class="tema clearfix">
           <a href="php.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/php.png" alt="">
           </a>
@@ -147,7 +129,7 @@
           </div>
         </article>
 
-        <!-- Tema 8 -->
+        <!-- Tema 7 -->
         <article class="tema clearfix">
           <a href="mysql.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/mysql.png" alt="">
@@ -165,8 +147,8 @@
           </div>
         </article>
 
-        <!-- Tema 9 -->
-        <article class="tema clearfix">
+        <!-- Tema 8 -->
+        <!-- <article class="tema clearfix">
           <a href="ruby.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/ruby.png" alt="">
           </a>
@@ -182,9 +164,9 @@
           <div class="contenedor-botones text-right">
             <a href="ruby.php" class="btn btn-primary">Leer más</a>
           </div>
-        </article>
+        </article> -->
 
-        <!-- Tema 10 -->
+        <!-- Tema 9 -->
         <article class="tema clearfix">
           <a href="bootstrap.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/bootstrap.png" alt="">
@@ -199,6 +181,24 @@
           </p>
           <div class="contenedor-botones text-right">
             <a href="bootstrap.php" class="btn btn-primary">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Tema 10 -->
+        <article class="tema clearfix">
+          <a href="git.php" class="thumb pull-left">
+            <img class="img-thumbnail" src="img/git.png" alt="">
+          </a>
+          <h2 class="titulo-tema">
+            <a href="git.php">
+              Git
+            </a>
+          </h2>
+          <p class="post-contenido text-justify">
+            Git es un sistema de control de versiones de software libre diseñado para manejar desde proyectos pequeños hasta muy grandes con rapidez y eficiencia.
+          </p>
+          <div class="contenedor-botones text-right">
+            <a href="git.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
@@ -222,26 +222,8 @@
 
         <!-- Tema 12 -->
         <article class="tema clearfix">
-          <a href="git.php" class="thumb pull-left">
-            <img class="img-thumbnail" src="img/git.png" alt="">
-          </a>
-          <h2 class="titulo-tema">
-            <a href="git.php">
-              Git
-            </a>
-          </h2>
-          <p class="post-contenido text-justify">
-            Git es un sistema de control de versiones de software libre diseñado para manejar desde proyectos pequeños hasta muy grandes con rapidez y eficiencia.
-          </p>
-          <div class="contenedor-botones text-right">
-            <a href="git.php" class="btn btn-primary">Leer más</a>
-          </div>
-        </article>
-
-        <!-- Tema 12 -->
-        <!-- <article class="tema clearfix">
           <a href="ajax.php" class="thumb pull-left">
-            <img class="img-thumbnail" src="img/ajax.jpg" alt="AJAX">
+            <img class="img-thumbnail" src="img/ajax.jpeg" alt="AJAX">
           </a>
           <h2 class="titulo-tema">
             <a href="ajax.php">
@@ -249,14 +231,15 @@
             </a>
           </h2>
           <p class="post-contenido text-justify">
-            AJAX es el sueño de los desarrolladores ya que permite: actualizar una página sin hacer una recargarga, solicitar y recibir información de un servidor después de que la página
+            AJAX es el sueño de los desarrolladores ya que permite: actualizar una página sin hacer una recarga, 
+            solicitar y recibir información de un servidor después de que la página
             ha sido cargada y enviar información a un servidor en segundo plano.
           </p>
           <div class="contenedor-botones text-right">
             <a href="ajax.php" class="btn btn-primary">Leer más</a>
           </div>
-        </article> -->
-
+        </article>
+        
         <!-- Tema 13 -->
         <article class="tema clearfix">
           <a href="json.php" class="thumb pull-left">
@@ -274,6 +257,25 @@
             <a href="json.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
+
+        <!-- Tema 14 -->
+        <article class="tema clearfix">
+          <a href="jQuery.php" class="thumb pull-left">
+            <img class="img-thumbnail" src="img/jquery.png" alt="">
+          </a>
+          <h2 class="titulo-tema">
+            <a href="jQuery.php">
+              jQuery
+            </a>
+          </h2>
+          <p class="post-contenido text-justify">
+            jQuery es una biblioteca de scripts JS. El objetivo principal de jQuery es simplificar la programación de JavaScript. jQuery es sencillo de aprender.
+          </p>
+          <div class="contenedor-botones text-right">
+            <a href="jQuery.php" class="btn btn-primary">Leer más</a>
+          </div>
+        </article>
+
   </section>
 
   <!-- Aca va el pie de página -->

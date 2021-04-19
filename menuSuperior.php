@@ -26,13 +26,14 @@
              <li><a href="html.php">HTML</a></li>
              <li><a href="css.php">CSS</a></li>
              <li><a href="js.php">JavaScript</a></li>
-             <li><a href="jQuery.php">jQuery</a></li>
              <li><a href="php.php">PHP</a></li>
              <li><a href="mysql.php">MySQL</a></li>
              <li><a href="bootstrap.php">BootStrap</a></li>
-             <li><a href="angularjs.php">Angular JS</a></li>
              <li><a href="git.php">Git</a></li>
+             <li><a href="angularjs.php">Angular JS</a></li>
+             <li><a href="ajax.php">AJAX</a></li>
              <li><a href="json.php">jSON</a></li>
+             <li><a href="jQuery.php">jQuery</a></li>
            </ul>
          </li>
          <li><a href="contenidoAdicional.php">Contenido Adicional</a></li>
