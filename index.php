@@ -204,6 +204,24 @@
 
         <!-- Tema 11 -->
         <article class="tema clearfix">
+          <a href="jQuery.php" class="thumb pull-left">
+            <img class="img-thumbnail" src="img/jquery.png" alt="">
+          </a>
+          <h2 class="titulo-tema">
+            <a href="jQuery.php">
+              jQuery
+            </a>
+          </h2>
+          <p class="post-contenido text-justify">
+            jQuery es una biblioteca de scripts JS. El objetivo principal de jQuery es simplificar la programación de JavaScript. jQuery es sencillo de aprender.
+          </p>
+          <div class="contenedor-botones text-right">
+            <a href="jQuery.php" class="btn btn-primary">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Tema 12 -->
+        <article class="tema clearfix">
           <a href="angularjs.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/angular.png" alt="">
           </a>
@@ -220,7 +238,7 @@
           </div>
         </article>
 
-        <!-- Tema 12 -->
+        <!-- Tema 13 -->
         <article class="tema clearfix">
           <a href="ajax.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/ajax.jpeg" alt="AJAX">
@@ -240,7 +258,7 @@
           </div>
         </article>
         
-        <!-- Tema 13 -->
+        <!-- Tema 14 -->
         <article class="tema clearfix">
           <a href="json.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/json.png" alt="jSON">
@@ -257,25 +275,6 @@
             <a href="json.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
-
-        <!-- Tema 14 -->
-        <article class="tema clearfix">
-          <a href="jQuery.php" class="thumb pull-left">
-            <img class="img-thumbnail" src="img/jquery.png" alt="">
-          </a>
-          <h2 class="titulo-tema">
-            <a href="jQuery.php">
-              jQuery
-            </a>
-          </h2>
-          <p class="post-contenido text-justify">
-            jQuery es una biblioteca de scripts JS. El objetivo principal de jQuery es simplificar la programación de JavaScript. jQuery es sencillo de aprender.
-          </p>
-          <div class="contenedor-botones text-right">
-            <a href="jQuery.php" class="btn btn-primary">Leer más</a>
-          </div>
-        </article>
-
   </section>
 
   <!-- Aca va el pie de página -->
