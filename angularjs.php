@@ -75,6 +75,9 @@
         <li>
           <p class="text-justify">AngularJS es fácil de probar.</p>
         </li>
+        <li>
+          <p class="text-justify">AngularJS utiliza el modelo vista-controlador.</p>
+        </li>      
       </ul>
     </article>
 
@@ -370,7 +373,8 @@
       </p>
       <ul>
         <li>
-          <p class="text-justify">La directiva <code>ng-app</code> inicializa una aplicación AngularJS. Esta directiva le dice a AngularJS el elemento a la que le pertenece la aplicación.</p>
+          <p class="text-justify">La directiva <code>ng-app</code> inicializa una aplicación AngularJS. Esta directiva le dice a 
+          AngularJS el elemento al que le pertenece la aplicación.</p>
         </li>
         <li>
           <p class="text-justify">La directiva <code>ng-init</code> inicializa los datos de la aplicación.</p>
@@ -410,20 +414,49 @@
         La expresión <code>{{ nombre }}</code> en el ejemplo, es una expresión de enlace de datos de AngularJS. El enlace de datos permite unir expresiones de AngularJS con datos de AngularJS.
         <code>{{ nombre }}</code> está unida con <code>ng-model="nombre"</code>.
       </p>
+      <p class="text-justify">
+        <b>Ejemplo 11</b>. Dos campos de texto enlazados con directivas <code>ng-model</code>.
+      </p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+      &lt;div data-ng-app="" data-ng-init="cantidad=1;precio=5"&gt;
+
+      &lt;h2&gt;Calculadora de costo&lt;/h2&gt;
+
+      Cantidad: &lt;input type="number" ng-model="cantidad"&gt; &lt;br&gt;
+      Precio: &lt;input type="number" ng-model="precio"&gt;
+      &lt;p&gt;
+        *Se agregará el IVA correspondiente.
+      &lt;/p&gt;
+      &lt;p&gt;Subtotal: $ {{ cantidad * precio }}&lt;/p&gt;
+      &lt;p&gt;&lt;b&gt;Total:&lt;/b&gt; $ {{ (cantidad * precio)*1.16 }}&lt;/p&gt;
+
+      &lt;/div&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt;
+      </code></pre>
 
       <h2>Repetir Elementos HTML</h2>
       <p class="text-justify">
-        La directiva <code>ng-init</code> permite repetir un elemento HTML.
+        La directiva <code>ng-repeat</code> permite repetir un elemento HTML.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 11</b>. Repetir elementos HTML.
+        <b>Ejemplo 12</b>. Repetir elementos HTML.
       </p>
       <pre><code>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 11&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 12&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -444,14 +477,14 @@
         La directiva ng-repeat clona los elementos HTML para cada elemento en el arreglo. También puede utilizarse en un arreglo de objetos.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 12</b>. Repetir elementos HTML en un arreglo de objetos.
+        <b>Ejemplo 13</b>. Repetir elementos HTML en un arreglo de objetos.
       </p>
       <pre><code>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 12&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 13&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -543,14 +576,14 @@
         <code>-</code> y utilizar solo minúsculas, <code>mi-primer-directiva</code>.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 13</b>. Crear nueva directiva, invocar por <b>nombre de elemento HTML</b>.
+        <b>Ejemplo 14</b>. Crear nueva directiva, invocar por <b>nombre de elemento HTML</b>.
       </p>
       <pre><code>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 13&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 14&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body ng-app="myApp"&gt;
@@ -561,7 +594,7 @@
       var app = angular.module("myApp", []);
       app.directive("miPrimerDirectiva", function() {
           return {
-              template : "&lt;h1&gt;!Fui concebido dentro de una directiva!&lt;/h1&gt;"
+              template : "&lt;h1&gt;¡Fui concebido dentro de una directiva!&lt;/h1&gt;"
           };
       });
     &lt;/script&gt;
@@ -570,14 +603,14 @@
   &lt;/html&gt;
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 14</b>. Crear nueva directiva, invocar por <b>atributo</b>.
+        <b>Ejemplo 15</b>. Crear nueva directiva, invocar por <b>atributo</b>.
       </p>
       <pre><code>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 14&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 15&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body ng-app="myApp"&gt;
@@ -588,7 +621,7 @@
       var app = angular.module("myApp", []);
       app.directive("miPrimerDirectiva", function() {
           return {
-              template : "&lt;h1&gt;!Fui concebido dentro de una directiva!&lt;/h1&gt;"
+              template : "&lt;h1&gt;¡Fui concebido dentro de una directiva!&lt;/h1&gt;"
           };
       });
     &lt;/script&gt;
@@ -597,14 +630,14 @@
   &lt;/html&gt;
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 15</b>. Crear nueva directiva, invocar por <b>clase</b>.
+        <b>Ejemplo 16</b>. Crear nueva directiva, invocar por <b>clase</b>.
       </p>
       <pre><code>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 15&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 16&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body ng-app="myApp"&gt;
@@ -621,21 +654,24 @@
       });
     &lt;/script&gt;
 
-    &lt;p&gt;&lt;b&gt;Nota: &lt;/b&gt;Se debe agregar el valor en la propiedad de resticción "C"
+    &lt;p&gt;&lt;b&gt;Nota: &lt;/b&gt;Se debe agregar el valor "C" en la propiedad de restrict
       para que sea posible invocarlo por el nombre de la clase.&lt;/p&gt;
 
   &lt;/body&gt;
   &lt;/html&gt;
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 16</b>. Crear nueva directiva, invocar por <b>comentario</b>.
+        <b>Nota</b>: Se debe agregar el valor "C" en la propiedad de restrict para que sea posible invocarlo por el nombre de la clase.
+      </p>
+      <p class="text-justify">
+        <b>Ejemplo 17</b>. Crear nueva directiva, invocar por <b>comentario</b>.
       </p>
       <pre><code>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 16&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 17&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body ng-app="myApp"&gt;
@@ -660,8 +696,13 @@
   &lt;/body&gt;
   &lt;/html&gt;
       </code></pre>
-      <p class="text-justify"></p>
-      <p class="text-justify"></p>
+      <p class="text-justify">
+        <b>Nota: </b> Se agrega la propiedad <b>replace</b>para que el comentario sea reemplazado y visible.
+      </p>
+      <p class="text-justify">
+        <b>Nota: </b> Se debe añadir el valor "M" a la propiedad <b>restrict</b> para que poder invocar la directiva 
+        desde un comentario.
+      </p>
       <p class="text-justify"></p>
       <p class="text-justify"></p>
       <p class="text-justify"></p>
@@ -679,14 +720,14 @@
         Para añadir un controlador a la aplicación y referir al controlador se utiliza la directiva <code>ng-controller</code>.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 17</b>. Modulo y controlador
+        <b>Ejemplo 18</b>. Modulo y controlador
       </p>
       <pre><code>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 17&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 18&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -709,7 +750,10 @@
         AngularJS que define un controlador, es una función JavaScript.
       </p>
       <p class="text-justify">
-        AngularJS invocará el controlador mediante el objeto <code>$scope</code>, en AngularJS <code>$scope</code> es la aplicación objeto (el dueño de las variables de la aplicación y las funciones).
+        AngularJS invocará el controlador mediante el objeto <code>$scope</code>.
+        <!-- en AngularJS <code>$scope</code> es la aplicación objeto (el dueño de las variables de la aplicación y las funciones). -->
+        El <code>$scope</code> es el nexo que une HTML (vista) con JavaScript (controlador), es un objeto con los métodos y propiedades
+        a su disposición, además es accesible por la vista y por el controlador.
       </p>
       <p class="text-justify">
         El controlador crea dos propiedades (variables) en el <code>scope</code> (<b>nombre</b> y <b>apellido</b>).
@@ -718,19 +762,19 @@
         La directiva <code>ng-model</code> une los campos de entrada de las propiedades del controlador (<b>nombre</b> y <b>apellido</b>).
       </p>
 
-      <h2>Metodos controladores</h2>
+      <h2>Métodos controladores</h2>
       <p class="text-justify">
         En el ejemplo anterior se mostró un objeto controlador con dos propiedades. Un controlador puede tener métodos (variables y funciones).
       </p>
       <p class="text-justify">
-        <b>Ejemplo 18.</b> Métodos en controladores
+        <b>Ejemplo 19.</b> Métodos en controladores
       </p>
       <pre><code>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 18&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 19&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -762,7 +806,7 @@
         contenido en la etiqueta <code>&lt;script&gt;</code> en un archivo externo llamado por ejemplo <code>personaCtrl.js</code>.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 19.</b> Controlador en un archivo externo
+        <b>Ejemplo 20.</b> Controlador en un archivo externo
       </p>
       <p class="text-justify">
         <b>HTML</b>
@@ -771,8 +815,8 @@
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 19&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 20&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -805,7 +849,7 @@
         Para el siguiente ejemplo se creará un nuevo archivo controlador y se utilizará en la aplicación.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 20</b>. Otro controlador en archivo externo
+        <b>Ejemplo 21</b>. Otro controlador en archivo externo
       </p>
       <p class="text-justify">
         <b>HTML</b>
@@ -814,8 +858,8 @@
   &lt;!DOCTYPE html&gt;
   &lt;html lang="es"&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ejemplo 20&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ejemplo 21&lt;/title&gt;
     &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -842,6 +886,167 @@
      ];
   });
       </code></pre>
+    </article>
+
+    <article class="tema">
+      <h2>Select</h2>
+      <p class="text-justify">
+        AngularJS permite crear listas desplegables a partir de los elementos de un arreglo u objeto. Existen dos directivas
+        para ello: <code>n-options</code> y <code>ng-repeat</code>.
+      </p>
+      <p class="text-justify">
+        <b>Ejemplo 22</b>. Lista desplegable con directiva <code>ng-options</code>.
+      </p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+      &lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+
+        &lt;p&gt;Seleccione una opción&lt;/p&gt;
+        &lt;select ng-model="selectedName" ng-options="x for x in names"&gt;
+        &lt;/select&gt;
+
+      &lt;/div&gt;
+
+      &lt;script&gt;
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.names = ["Juan", "Pedro", "Carlos"];
+        });
+      &lt;/script&gt;
+
+      &lt;p&gt;Este ejemplo muestra como llenar una lista utilizando la directiva ng-options.&lt;/p&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt;        
+      </code></pre>
+      <p class="text-justify">
+        <b>Ejemplo 23</b>. Lista desplegable con directiva <code>ng-repeat</code>.
+      </p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+      &lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+
+        &lt;p&gt;Seleccione una opción&lt;/p&gt;
+        &lt;select&gt;
+          &lt;option ng-repeat="x in names"&gt;{{x}}&lt;/option&gt;
+        &lt;/select&gt;
+
+      &lt;/div&gt;
+
+      &lt;script&gt;
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.names = ["Juan", "Pedro", "Carlos"];
+        });
+      &lt;/script&gt;
+
+      &lt;p&gt;Este ejemplo muestra como llenar una lista utilizando la directiva ng-options.&lt;/p&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt;        
+      </code></pre>
+      <p class="text-justify">
+        <b>Ejemplo 24</b>. Selección de un objeto a través de una lista desplegable.
+      </p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+      &lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+
+        &lt;p&gt;Seleccione una opción:&lt;/p&gt;
+
+        &lt;select ng-model="selectedCar" ng-options="x for (x, y) in cars"&gt;
+        &lt;/select&gt;
+
+        &lt;h1&gt;Usted seleccionó: {{selectedCar.brand}}&lt;/h1&gt;
+        &lt;h2&gt;Modelo: {{selectedCar.model}}&lt;/h2&gt;
+        &lt;h3&gt;Color: {{selectedCar.color}}&lt;/h3&gt;
+
+        &lt;p&gt;Note que el valor seleccionado corresponde a un objeto.&lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;script&gt;
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.cars = {
+                opcion1 : {brand : "Ford", model : "Mustang", color : "rojo"},
+                opcion2 : {brand : "Fiat", model : "500", color : "blanco"},
+                opcion3 : {brand : "Volvo", model : "XC90", color : "negro"}
+            }
+        });
+      &lt;/script&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt;
+      </code></pre>
+      <p class="text-justify"></p>
+      <p class="text-justify"></p>
+      <p class="text-justify"></p>
+      <p class="text-justify"></p>
+      <p class="text-justify"></p>
+      <p class="text-justify"></p>
+    </article>
+    <article class="tema">
+      <h2>SQL + Tablas</h2>
+      <p class="text-justify">
+        Se ha visto que la directiva <code>ng-repeat</code> es idónea para desplegar tablas, además se combinará su 
+        funcionalidad con la función <code>$http.get</code> que hace una solicitud al servidor.
+      </p>
+      <p class="text-justify">
+        <b>Ejemplo 25</b>. Desplegando la salida de un query en una tabla HTML.
+      </p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"&gt;&lt;/script&gt;
+    &lt;body&gt;
+
+      &lt;div ng-app="myApp" ng-controller="customersCtrl"&gt; 
+
+        &lt;table&gt;
+          &lt;tr ng-repeat="x in names"&gt;
+            &lt;td&gt;{{ x.Name }}&lt;/td&gt;
+            &lt;td&gt;{{ x.Country }}&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+
+      &lt;/div&gt;
+
+      &lt;script&gt;
+        var app = angular.module('myApp', []);
+        app.controller('customersCtrl', function($scope, $http) {
+            $http.get("customers_mysql.php")
+            .then(function (response) {$scope.names = response.data.records;});
+        });
+      &lt;/script&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt;
+      </code></pre>
+      <p class="text-justify">
+        Observe que la función <code>$http.get</code> hace una solicitud al servidor, el cuál devuelve la respuesta del archivo 
+        <code>customers_mysql.php</code>. En este ejemplo, ese archivo hace una consulta a la base de datos del servidor.
+      </p>
     </article>
   </section>
 
