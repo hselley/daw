@@ -645,8 +645,237 @@
 
     <article class="tema">
       <h2>AJAX + PHP</h2>
-      <p class="text-justify"></p>
-      <p class="text-justify"></p>
+      <p class="text-justify">
+        AJAX permite crear aplicaciones más interactivas, inclusive mediante PHP. El siguiente ejemplo muestra
+        como una página web puede comunicarse con un servidor web mientras el usuario escribe caracteres a través
+        de un campo de texto.
+      </p>
+      <p class="text-justify"><b>Ejemplo 7</b>. Página interactiva con PHP y AJAX.</p>
+      <p class="text-justify"><b>HTML</b></p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;body&gt;
+        &lt;h2&gt;The XMLHttpRequest Object&lt;/h2&gt;
+        &lt;h3&gt;Start typing a name in the input field below:&lt;/h3&gt;
+        &lt;p&gt;Suggestions: &lt;span id="txtHint"&gt;&lt;/span&gt;&lt;/p&gt; 
+        &lt;p&gt;First name: &lt;input type="text" id="txt1" onkeyup="showHint(this.value)"&gt;&lt;/p&gt;
+        &lt;script&gt;
+            function showHint(str) {
+                var xhttp;
+                if (str.length == 0) { 
+                    document.getElementById("txtHint").innerHTML = "";
+                    return;
+                }
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "gethint.php?q="+str, true);
+                xhttp.send();   
+            }
+        &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+      </code></pre>
+      <p class="text-justify">PHP</p>
+      <pre><code>
+  &lt;?php
+      // Array with names
+      $a[] = "Anna";
+      $a[] = "Brittany";
+      $a[] = "Cinderella";
+      $a[] = "Diana";
+      $a[] = "Eva";
+      $a[] = "Fiona";
+      $a[] = "Gunda";
+      $a[] = "Hege";
+      $a[] = "Inga";
+      $a[] = "Johanna";
+      $a[] = "Kitty";
+      $a[] = "Linda";
+      $a[] = "Nina";
+      $a[] = "Ophelia";
+      $a[] = "Petunia";
+      $a[] = "Amanda";
+      $a[] = "Raquel";
+      $a[] = "Cindy";
+      $a[] = "Doris";
+      $a[] = "Eve";
+      $a[] = "Evita";
+      $a[] = "Sunniva";
+      $a[] = "Tove";
+      $a[] = "Unni";
+      $a[] = "Violet";
+      $a[] = "Liza";
+      $a[] = "Elizabeth";
+      $a[] = "Ellen";
+      $a[] = "Wenche";
+      $a[] = "Vicky";
+
+      // get the q parameter from URL
+      $q = $_REQUEST["q"];
+
+      $hint = "";
+
+      // lookup all hints from array if $q is different from ""
+      if ($q !== "") {
+          $q = strtolower($q);
+          $len = strlen($q);
+          foreach($a as $name) {
+              if (stristr($q, substr($name, 0, $len))) {
+                  if ($hint === "") {
+                      $hint = $name;
+                  } else {
+                      $hint .= ", $name";
+                  }
+              }
+          }
+      }
+
+      // Output "no suggestion" if no hint was found or output correct values
+      echo $hint === "" ? "no suggestion" : $hint;
+  ?&gt;
+      </code></pre>
+      <p class="text-justify">
+        En primer lugar, se verifica si el campo de texto está vacío (str.length == 0), si lo está entonces
+        se borra la variable <code>txtHint</code> y se sale de la función. 
+      </p>
+      <p class="text-justify">
+        En caso de que el campo no esté vacío se hace lo siguiente:
+      </p>
+      <ul>
+        <li>
+          <p class="text-justify">Se crea un objeto <code>XMLHttpRequest</code>.</p>
+        </li>
+        <li>
+          <p class="text-justify">Se crea una función que será ejecutada cuando el servidor responda 
+            <code>ready</code>.</p>
+        </li>
+        <li>
+          <p class="text-justify">Se envía la solicitud al archivo PHP (gethint.php) que se encuentra en 
+            el servidor.</p>
+        </li>
+        <li>
+          <p class="text-justify">Observe que se agrega un parámetro al nombre del archivo PHP: 
+            <code>"gethint.php?q"+str</code></p>
+        </li>
+        <li>
+          <p class="text-justify">La variable <code>str</code> almacena el contenido del campo de texto.</p>
+        </li>
+        <li>
+          <p class="text-justify">La función <code>strtolower</code> convierte en minúsculas la cadena que 
+          recibe como argumento.</p>
+        </li>
+        <li>
+          <p class="text-justify">
+            En el ciclo <code>foreach</code>, se obtiene cada cadena del arreglo en la variable <code>name</code>. 
+            Para cada valor en la variable <code>name</code>, se obtiene la subcadena (mediante la función <code>substr</code>) 
+            del mismo tamaño que lo que ha ingresado el usuario en el campo de texto. Ahora la función <code>stristr</code> 
+            compara la subcadena con lo que ha ingresado el usuario en <code>q</code>, si se encuentra una coincidencia se 
+            almacena en la variable <code>hint</code> si la variable está vacía, si no está vacía se concatena agregando una
+            coma (debido a que habrá más de una ocurrencia). 
+          </p>
+        </li>
+      </ul>
+    </article>
+    
+    <article class="tema">
+      <h2>AJAX + PHP + MySQL</h2>
+      <p class="text-justify">
+        En el siguiente ejemplo muestra como una página web puede comunicarse con un servidor web, que reacciona a la 
+        selección que el usuario haga en el componente <code>select</code>. Con el valor que tenga este componente, se 
+        realiza una conexión y consulta a una base de datos para obtener la información correspondiente a dicha selección.
+      </p>
+      <p class="text-justify"><b>Ejemplo 8</b>. AJAX + MySQL.</p>
+      <p class="text-justify"><b>HTML</b></p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;style&gt;
+      table,th,td {
+        border : 1px solid black;
+        border-collapse: collapse;
+      }
+      th,td {
+        padding: 5px;
+      }
+    &lt;/style&gt;
+    &lt;body&gt;
+      &lt;h2&gt;The XMLHttpRequest Object&lt;/h2&gt;
+
+      &lt;form action=""&gt; 
+        &lt;select name="customers" onchange="showCustomer(this.value)"&gt;
+          &lt;option value=""&gt;Select a customer:&lt;/option&gt;
+          &lt;option value="ALFKI"&gt;Alfreds Futterkiste&lt;/option&gt;
+          &lt;option value="NORTS "&gt;North/South&lt;/option&gt;
+          &lt;option value="WOLZA"&gt;Wolski Zajazd&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/form&gt;
+      &lt;br&gt;
+      &lt;div id="txtHint"&gt;Customer info will be listed here...&lt;/div&gt;
+
+      &lt;script&gt;
+        function showCustomer(str) {
+          var xhttp;  
+          if (str == "") {
+            document.getElementById("txtHint").innerHTML = "";
+            return;
+          }
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+          };
+          xhttp.open("GET", "getcustomer.php?q="+str, true);
+          xhttp.send();
+        }
+      &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+      </code></pre>
+      <p class="text-justify"><b>PHP</b></p>
+      <pre><code>
+  &lt;?php
+      $mysqli = new mysqli("servername", "username", "password", "dbname");
+      if($mysqli-&gt;connect_error) {
+          exit('Could not connect');
+      }
+
+      $sql = "SELECT customerid, companyname, contactname, address, city, postalcode, country
+      FROM customers WHERE customerid = ?";
+
+      $stmt = $mysqli-&gt;prepare($sql);
+      $stmt-&gt;bind_param("s", $_GET['q']);
+      $stmt-&gt;execute();
+      $stmt-&gt;store_result();
+      $stmt-&gt;bind_result($cid, $cname, $name, $adr, $city, $pcode, $country);
+      $stmt-&gt;fetch();
+      $stmt-&gt;close();
+
+      echo "&lt;table&gt;";
+      echo "&lt;tr&gt;";
+      echo "&lt;th&gt;CustomerID&lt;/th&gt;";
+      echo "&lt;td&gt;" . $cid . "&lt;/td&gt;";
+      echo "&lt;th&gt;CompanyName&lt;/th&gt;";
+      echo "&lt;td&gt;" . $cname . "&lt;/td&gt;";
+      echo "&lt;th&gt;ContactName&lt;/th&gt;";
+      echo "&lt;td&gt;" . $name . "&lt;/td&gt;";
+      echo "&lt;th&gt;Address&lt;/th&gt;";
+      echo "&lt;td&gt;" . $adr . "&lt;/td&gt;";
+      echo "&lt;th&gt;City&lt;/th&gt;";
+      echo "&lt;td&gt;" . $city . "&lt;/td&gt;";
+      echo "&lt;th&gt;PostalCode&lt;/th&gt;";
+      echo "&lt;td&gt;" . $pcode . "&lt;/td&gt;";
+      echo "&lt;th&gt;Country&lt;/th&gt;";
+      echo "&lt;td&gt;" . $country . "&lt;/td&gt;";
+      echo "&lt;/tr&gt;";
+      echo "&lt;/table&gt;";
+  ?&gt;
+      </code></pre>
     </article>
   </section>
 

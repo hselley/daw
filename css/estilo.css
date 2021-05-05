@@ -120,13 +120,13 @@ article {
 }
 
 /* -- Media Querie -- */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .post .thumb {
     width: 100%;
     margin-bottom: 20px;
     margin-right: 0px;
   }
-}
+} */
 
 /* Estilo para el código */
 pre {

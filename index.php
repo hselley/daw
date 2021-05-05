@@ -260,21 +260,41 @@
         
         <!-- Tema 14 -->
         <article class="tema clearfix">
+          <a href="nodejs.php" class="thumb pull-left">
+            <img class="img-thumbnail" src="img/nodejs.png" alt="NodeJS">
+          </a>
+          <h2 class="titulo-tema">
+            <a href="nodejs.php">
+              Node.js
+            </a>
+          </h2>
+          <p class="post-contenido text-justify">
+          Node.js es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome. 
+          Permite ejecutar JavaScript en la capa del servidor (pero no limitándose a ello).
+          </p>
+          <div class="contenedor-botones text-right">
+            <a href="nodejs.php" class="btn btn-primary">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Tema 15 -->
+        <!-- <article class="tema clearfix">
           <a href="json.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/json.png" alt="jSON">
           </a>
           <h2 class="titulo-tema">
             <a href="json.php">
-              jSON
+              JSON
             </a>
           </h2>
           <p class="post-contenido text-justify">
-            jSON es una sintáxis para almacenamiento e intercambio de información. jSON es una alternativa sencilla de usar a XML.
+            JSON (JavaScript Object Notation) es una sintáxis para almacenamiento e intercambio de información. jSON es una 
+            alternativa sencilla de usar a XML.
           </p>
           <div class="contenedor-botones text-right">
             <a href="json.php" class="btn btn-primary">Leer más</a>
           </div>
-        </article>
+        </article> -->
   </section>
 
   <!-- Aca va el pie de página -->
