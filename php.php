@@ -1604,6 +1604,174 @@
       </code></pre>
     </article>
 
+    <article class="tema">
+      <h2>Manejo de sesiones</h2>
+      <p class="text-justify">
+        Las sesiones en PHP permiten almacenar información en variables entre diversas páginas. A diferencia de las
+        cookies, la información no se almacena en la computadora del usuario.
+      </p>
+      <h2>Iniciar una sesión</h2>
+      <p class="text-justify">
+        Las sesiones en PHP se inician con la función <code>session_start()</code>. Las variables de sesión son almacenadas
+        en la vaiable global de PHP <code>$_SESSION</code>. 
+      </p>
+      <p class="text-justify">
+        <b>Ejemplo 25</b>. Inicio de sesión PHP
+      </p>
+      <pre><code>
+  &lt;?php
+    // Start the session
+    session_start();
+  ?&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;body&gt;
+      &lt;?php
+        // Set session variables
+        $_SESSION["favcolor"] = "green";
+        $_SESSION["favanimal"] = "cat";
+        echo "Session variables are set.";
+      ?&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;         
+      </code></pre>
+      <h2>Obtener los valores de las variables de sesión</h2>
+      <p class="text-justify">
+        Para leer las variables de sesión desde la misma página o alguna otra, es necesario hacer referencia a la variable global
+        <code>$_SESSION</code> de PHP. La variable de sesión es en realidad un arreglo, el nombre de la variable de sesión 
+        corresponde al índice del arreglo.
+      </p>
+      <p class="text-justify">
+        Es importante mencionar que las variables de sesión no se propagan hacia todos los archivos PHP, sólo se hará en aquellas
+        donde se incluya la función <code>session_start()</code>.
+      </p>
+      <p class="text-justify">
+        <b>Ejemplo 26. </b>Lectura de variables de sesión
+      </p>
+      <pre><code>
+  &lt;?php
+    session_start();
+  ?&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;body&gt;
+
+      &lt;?php
+      // Echo session variables that were set on previous page
+      echo "Favorite color is " . $_SESSION["favcolor"] . ".&lt;br&gt;";
+      echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
+      ?&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt;         
+      </code></pre>
+      <p class="text-justify">
+        <b>Ejemplo 27. Impresión de todas las variables de sesión</b>
+      </p>
+      <pre><code>
+  &lt;?php
+    session_start();
+  ?&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;body&gt;
+
+      &lt;?php
+        print_r($_SESSION);
+      ?&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt; 
+      </code></pre>
+      <h2>Modificación de las variables de sesión</h2>
+      <p class="text-justify">
+        Para modificar el contenido de una variable de sesión sólo se debe sobreescribir su contenido, de la misma
+        forma como lo haría con cualquier variable de PHP.
+      </p>
+      <p class="text-justify">
+        <b>Ejemplo 28.</b> Modificar el contenido de una variable de sesión
+      </p>
+      <pre><code>
+  &lt;?php
+    session_start();
+  ?&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;body&gt;
+
+      &lt;?php
+        // to change a session variable, just overwrite it
+        $_SESSION["favcolor"] = "yellow";
+        print_r($_SESSION);
+      ?&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt; 
+      </code></pre>
+      <h2>Verificar el estado de una sesión</h2>
+      <p class="text-justify">
+        Es común y útil saber el estado de una sesión, es decir, saber si existe y si se encuentra activa. Para ello
+        PHP tiene una función llamada <code>session_status</code>. Esta función alguno de tres posibles valores:
+        <ol>
+          <li>
+            <b>PHP_SESSION_DISABLED</b>: si las sesiones están deshabilitadas.
+          </li>
+          <li>
+            <b>PHP_SESSION_NONE</b>: si las sesiones están habilitadas, pero no existe ninguna.
+          </li>
+          <li>
+            <b>PHP_SESSION_ACTIVE</b>: si las sesiones están habilitadas, y existe una.
+          </li>
+        </ol>
+      </p>
+      <pre><code>
+  &lt;?php
+    session_start();
+    $id = session_status();
+    if($id == PHP_SESSION_DISABLED) {
+        print("Sesión deshabilitada");
+    } elseif($id == PHP_SESSION_NONE) {
+        print("Sesión habilitada pero no hay una abierta");
+    } elseif ($id == PHP_SESSION_ACTIVE) {
+        print("Sesión habilitada y abierta: \n");
+        print(session_id());
+    } else {
+        print("Estado desconocido.");
+    }
+  ?&gt;        
+      </code></pre>
+      <p class="text-justify"></p>
+      <h2>Cerrar y destruir una sesión</h2>
+      <p class="text-justify">
+        Para borrar todas las variables y destruir la sesión, se deben usar las functiones <code>session_unset</code> y 
+        <code>session_destroy</code>.
+      </p>
+      <p class="text-justify">
+        La función <code>session_unset</code> borra las variables de sesión. Por otro lado, la función <code>session_destroy</code>
+        destruye la sesión activa.
+      </p>
+      <pre><code>
+  &lt;?php
+      session_start();
+  ?&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+
+      &lt;?php
+          // borrar las variables de sesión
+          session_unset();
+
+          // destruir la sesión
+          session_destroy();
+      ?&gt;
+
+  &lt;/body&gt;
+  &lt;/html&gt;         
+      </code></pre>
+      <p class="text-justify"></p>
+      <p class="text-justify"></p>
+    </article>
   </section>
 
   <!-- Scripts que se necesitan para el sitio -->
