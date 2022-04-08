@@ -162,10 +162,29 @@
               </p>
               <ul>
                 <li>
+                  <p class="text-justify">ID compra</p>
+                </li>
+                <li>
                   <p class="text-justify">Usuario</p>
                 </li>
                 <li>
                   <p class="text-justify">Producto que ha comprado el usuario</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="text-justify">
+                Carrito de compras de los usuarios.
+              </p>
+              <ul>
+                <li>
+                  <p class="text-justify">ID compra</p>
+                </li>
+                <li>
+                  <p class="text-justify">Usuario</p>
+                </li>
+                <li>
+                  <p class="text-justify">Producto que está por comprar el usuario</p>
                 </li>
               </ul>
             </li>
