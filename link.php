@@ -41,6 +41,7 @@
           <li><a target="_blank" href="http://coolestguidesontheplanet.com/get-apache-mysql-php-and-phpmyadmin-working-on-osx-10-11-el-capitan/">Configuración de Apache, PHP, MySQL y PHPMyAdmin en OSX 10.11</a></li>
           <li><a target="_blank" href="https://coolestguidesontheplanet.com/get-apache-mysql-php-and-phpmyadmin-working-on-macos-sierra/">Configuración de Apache, PHP, MySQL y PHPMyAdmin en macOS Sierra 10.12</a></li>
           <li><a target="_blank" href="https://css-tricks.com/snippets/jquery/smooth-scrolling/">Smooth Scrolling</a></li>
+          <li><a target="_blank" href="https://baseline.is/tools/css-photo-filters/">Efectos a fotos con CSS</a></li>
         </ul>
       </p>
       <h3>Herramientas utilizadas para construir este sitio</h3>
