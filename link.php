@@ -42,6 +42,7 @@
           <li><a target="_blank" href="https://coolestguidesontheplanet.com/get-apache-mysql-php-and-phpmyadmin-working-on-macos-sierra/">Configuración de Apache, PHP, MySQL y PHPMyAdmin en macOS Sierra 10.12</a></li>
           <li><a target="_blank" href="https://css-tricks.com/snippets/jquery/smooth-scrolling/">Smooth Scrolling</a></li>
           <li><a target="_blank" href="https://baseline.is/tools/css-photo-filters/">Efectos a fotos con CSS</a></li>
+          <li><a target="_blank" href="https://learn.shayhowe.com/">Shay Howe: Sitio para aprender HTML y CSS.</a></li>
         </ul>
       </p>
       <h3>Herramientas utilizadas para construir este sitio</h3>
