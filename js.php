@@ -557,146 +557,146 @@
         <b>Ejemplo 13.</b> Cálculo del factorial de un número ingresado a través de un formulario.
       </p>
       <pre><code>
-      &lt!DOCTYPE html&gt
-&lthtml lang="en"&gt
-&lthead&gt
-    &ltmeta charset="UTF-8"&gt
-    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
-    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
-    &lttitle&gtFactorial Cíclico&lt/title&gt
-    &ltscript&gt
-        function borrar() {
-            document.getElementById("resultado").innerHTML = ""
-            console.log("Borrado")
-        }
-
-        function factorial() {
-            valor = document.getElementById("numero").value
-            var x = parseInt(valor)
-            console.log("Llamamos a la función cíclica")
-            factorialC(x)
-            console.log(x)
-        }
-
-        function factorialC(x) {
-            var f = 1
-            for(i=1; i&lt=x; i++) {
-                f*=i
-                console.log(f)
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtFactorial Cíclico&lt/title&gt
+        &ltscript&gt
+            function borrar() {
+                document.getElementById("resultado").innerHTML = ""
+                console.log("Borrado")
             }
-            salida = x + "! = " + f
-            document.getElementById("resultado").innerHTML = salida
-        }
-    &lt/script&gt
-&lt/head&gt
-&ltbody&gt
-    &lth1&gtFactorial Cíclico&lt/h1&gt
-    &ltp&gtIngrese un número entero positivo.&lt/p&gt
-    &ltform action=""&gt
-        &ltinput type="number" min="0" id="numero"&gt
-    &lt/form&gt
-    &ltbutton onclick="factorial()"&gtCalcular&lt/button&gt
-    &ltbutton onclick="borrar()"&gtBorrar&lt/button&gt
-    &ltp id="resultado"&gt&lt/p&gt
-&lt/body&gt
-&lt/html&gt
+
+            function factorial() {
+                valor = document.getElementById("numero").value
+                var x = parseInt(valor)
+                console.log("Llamamos a la función cíclica")
+                factorialC(x)
+                console.log(x)
+            }
+
+            function factorialC(x) {
+                var f = 1
+                for(i=1; i&lt=x; i++) {
+                    f*=i
+                    console.log(f)
+                }
+                salida = x + "! = " + f
+                document.getElementById("resultado").innerHTML = salida
+            }
+        &lt/script&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lth1&gtFactorial Cíclico&lt/h1&gt
+        &ltp&gtIngrese un número entero positivo.&lt/p&gt
+        &ltform action=""&gt
+            &ltinput type="number" min="0" id="numero"&gt
+        &lt/form&gt
+        &ltbutton onclick="factorial()"&gtCalcular&lt/button&gt
+        &ltbutton onclick="borrar()"&gtBorrar&lt/button&gt
+        &ltp id="resultado"&gt&lt/p&gt
+    &lt/body&gt
+    &lt/html&gt
       </code></pre>
       <p class="text-justify">
         <b>Ejemplo 14.</b> Cálculo de la serie de ULAM, ingresando un número desde un formulario.
       </p>
       <pre><code>
-      &lt!DOCTYPE html&gt
-&lthtml lang="en"&gt
-&lthead&gt
-    &ltmeta charset="UTF-8"&gt
-    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
-    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
-    &lttitle&gtULAM&lt/title&gt
-    &ltscript&gt
-        function ulam() {
-            var y = ""
-            // Borrar el contenido del párrafo
-            document.getElementById("serie").innerHTML = y
-
-            x = document.getElementById("numero").value
-            console.log(x)
-            var valor = parseInt(x)
-        
-            while(valor != 1) {
-                if(valor % 2 == 0)
-                    valor /= 2
-                else
-                    valor = 3*valor + 1
-                console.log(valor)
-
-                y = y + "&ltbr&gt" + valor
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtULAM&lt/title&gt
+        &ltscript&gt
+            function ulam() {
+                var y = ""
+                // Borrar el contenido del párrafo
                 document.getElementById("serie").innerHTML = y
-            }            
-        }
 
-        function borrar() {
-            // Borrar el contenido del párrafo
-            document.getElementById("serie").innerHTML = ""
-        }
-    &lt/script&gt
-&lt/head&gt
-&ltbody&gt
-    &lth1&gtSerie de ULAM&lt/h1&gt
-    &ltp&gtIngrese un número entero positivo.&lt/p&gt
-    &ltform action=""&gt
-        &ltinput type="number" min="1" id="numero"&gt
-    &lt/form&gt
-    &ltbutton onclick="ulam()"&gtCalcular&lt/button&gt
-    &ltbutton onclick="borrar()"&gtBorrar&lt/button&gt
-    &lth3&gtResultado de la serie&lt/h3&gt
-    &ltp id="serie"&gtasd&lt/p&gt
-&lt/body&gt
-&lt/html&gt
+                x = document.getElementById("numero").value
+                console.log(x)
+                var valor = parseInt(x)
+            
+                while(valor != 1) {
+                    if(valor % 2 == 0)
+                        valor /= 2
+                    else
+                        valor = 3*valor + 1
+                    console.log(valor)
+
+                    y = y + "&ltbr&gt" + valor
+                    document.getElementById("serie").innerHTML = y
+                }            
+            }
+
+            function borrar() {
+                // Borrar el contenido del párrafo
+                document.getElementById("serie").innerHTML = ""
+            }
+        &lt/script&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lth1&gtSerie de ULAM&lt/h1&gt
+        &ltp&gtIngrese un número entero positivo.&lt/p&gt
+        &ltform action=""&gt
+            &ltinput type="number" min="1" id="numero"&gt
+        &lt/form&gt
+        &ltbutton onclick="ulam()"&gtCalcular&lt/button&gt
+        &ltbutton onclick="borrar()"&gtBorrar&lt/button&gt
+        &lth3&gtResultado de la serie&lt/h3&gt
+        &ltp id="serie"&gtasd&lt/p&gt
+    &lt/body&gt
+    &lt/html&gt
       </code></pre>
       <p class="text-justify">
         <b>Ejemplo 15.</b> Serie de Fibonacci. Obtener la <i>n</i>-ésima cifra de la serie obteniendo el número <i>n</i>  
         desde un formulario.
       </p>
       <pre><code>
-      &lt!DOCTYPE html&gt
-&lthtml lang="en"&gt
-&lthead&gt
-    &ltmeta charset="UTF-8"&gt
-    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
-    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
-    &lttitle&gtFibonacci Cíclico&lt/title&gt
-&lt/head&gt
-&ltbody&gt
-    &lth1&gtSerie de Fibonacci (versión cíclica)&lt/h1&gt
-    &ltp&gtIngrese un número positivo, será la cantidad de cifras de la serie.&lt/p&gt
-    &ltform action=""&gt
-        &ltinput type="number" min="0" id="numero"&gt
-    &lt/form&gt
-    &ltbutton onclick="fib()"&gtCalcular&lt/button&gt
-    &ltp id="salida"&gt&lt/p&gt
-    &ltscript&gt
-        function fib() {
-            valor = document.getElementById("numero").value
-            x = parseInt(valor)
-            console.log(x)
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtFibonacci Cíclico&lt/title&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lth1&gtSerie de Fibonacci (versión cíclica)&lt/h1&gt
+        &ltp&gtIngrese un número positivo, será la cantidad de cifras de la serie.&lt/p&gt
+        &ltform action=""&gt
+            &ltinput type="number" min="0" id="numero"&gt
+        &lt/form&gt
+        &ltbutton onclick="fib()"&gtCalcular&lt/button&gt
+        &ltp id="salida"&gt&lt/p&gt
+        &ltscript&gt
+            function fib() {
+                valor = document.getElementById("numero").value
+                x = parseInt(valor)
+                console.log(x)
 
-            f0=0
-            f1=1
+                f0=0
+                f1=1
 
-            salida = ""
+                salida = ""
 
-            for(i=0; i&lt=x; i++) {
-                f=f0+f1
-                f0 = f1
-                f1 = f
-                console.log(f)
-                salida = salida + "&ltbr&gt" + f
+                for(i=0; i&lt=x; i++) {
+                    f=f0+f1
+                    f0 = f1
+                    f1 = f
+                    console.log(f)
+                    salida = salida + "&ltbr&gt" + f
+                }
+                document.getElementById("salida").innerHTML = salida
             }
-            document.getElementById("salida").innerHTML = salida
-        }
-    &lt/script&gt
-&lt/body&gt
-&lt/html&gt
+        &lt/script&gt
+    &lt/body&gt
+    &lt/html&gt
       </code></pre>
 
       <p class="text-justify">
