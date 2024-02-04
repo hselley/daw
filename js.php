@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Desarrollo de Aplicaciones Web</title>
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="stylesheet" href="../css/iconos.css">
   <link rel="stylesheet" href="css/styles/tomorrow-night.css">
@@ -1347,9 +1354,5 @@
 
 
   </section>
-
-  <!-- Scripts que se necesitan para el sitio -->
-  <script src="../js/jquery.js" charset="utf-8"></script>
-  <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

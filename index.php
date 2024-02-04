@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Desarrollo de Aplicaciones Web</title>
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="stylesheet" href="../css/iconos.css">
   <!-- Google Analytics -->
-  <script>
+  <!-- <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -18,7 +25,7 @@
   ga('send', 'pageview');
 
 </script>
-<script src="https://www.w3counter.com/tracker.js?id=107371"></script>
+<script src="https://www.w3counter.com/tracker.js?id=107371"></script> -->
 </head>
 <body>
 
@@ -310,15 +317,11 @@
       			<li><a href="http://www.twitter.com/hector_selley" target="_blank" class="icon-twitter" style="background-color: #00b0cb;"></a></li>
       			<li><a href="https://plus.google.com/u/0/+HectorJulianSelleyRojas/posts" target="_blank" class="icon-google-plus" style="background-color: #f48400;"></a></li>
       			<li><a href="https://www.youtube.com/user/hectorselley" target="_blank" class="icon-youtube" style="background-color: red;"></a></li>
-      			<li><a href="mailto:hector.selley@gmail.com" class="icon-envelop" style="background-color: gray;"></a></li>
+      			<li><a href="mailto:hector.selley@anahuac.mx" class="icon-envelop" style="background-color: gray;"></a></li>
       		</ul>
       	</div>
       </div>
     </div>
   </footer>
-
-  <!-- Scripts que se necesitan para el sitio -->
-  <script src="../js/jquery.js" charset="utf-8"></script>
-  <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
